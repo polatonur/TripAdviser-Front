@@ -37,12 +37,15 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log(data);
       document.querySelector("#response").innerHTML = "Merci";
 
-      const response = await axios.post(
-        "https://tripadviser-backend.herokuapp.com/contact",
-        data
-      );
-      console.log(response.data);
-      console.log(response.status);
+      await axios
+        .post("https://tripadviser-backend.herokuapp.com/contact", data)
+        .then((response) => {
+          console.log(response.data);
+          console.log(response.status);
+        })
+        .catch((err) => {
+          console.log(error);
+        });
 
       const msg = document.querySelector("#response");
       if (response.status === 200) {
