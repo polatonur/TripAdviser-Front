@@ -37,21 +37,22 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log(data);
       document.querySelector("#response").innerHTML = "Merci";
 
+      const msg = document.querySelector("#response");
       await axios
-        .post("https://tripadviser-backend.herokuapp.com/contact", data)
+        .post("http://localhost:8000/contact", data)
         .then((response) => {
-          console.log(response.data);
+          console.log(response);
           console.log(response.status);
+
+          if (response.status === 200) {
+            msg.innerHTML = "Bienvenu sur TripAdviser";
+          } else {
+            msg.innerHTML = "Oops! Une erreur est survenue. Essayez à nouveau";
+          }
         })
         .catch((err) => {
           console.log(err);
+          msg.innerHTML = "Oops! Une erreur est survenue. Essayez à nouveau";
         });
-
-      const msg = document.querySelector("#response");
-      if (response.status === 200) {
-        msg.innerHTML = "Bienvenu sur TripAdviser";
-      } else {
-        msg.innerHTML = "Oops! Une erreur est survenue. Essayez à nouveau";
-      }
     });
 });
