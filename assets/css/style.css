@@ -1,0 +1,735 @@
+@font-face {
+  font-family: "Trip Sans";
+  src: url("../fonts/TripSans-Regular.ttf");
+  src: url("../fonts/TripSans-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/TripSans-Regular.woff2") format("woff2"),
+    url("../fonts/TripSans-Regular.woff") format("woff"),
+    url("../fonts/TripSans-Regular.ttf") format("truetype"),
+    url("../fonts/TripSans-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Trip Sans Med";
+  src: url("../fonts/TripSans-Medium.eot");
+  src: url("../fonts/TripSans-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/TripSans-Medium.woff2") format("woff2"),
+    url("../fonts/TripSans-Medium.woff") format("woff"),
+    url("../fonts/TripSans-Medium.ttf") format("truetype"),
+    url("../fonts/TripSans-Medium.svg#TripSans-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.eiffel .carrousel::-webkit-scrollbar {
+  display: none;
+}
+.guide-pictures::-webkit-scrollbar {
+  display: none;
+}
+.sub-header-buttons::-webkit-scrollbar {
+  display: none;
+}
+/* .eiffel .carrousel, .guide-pictures, .sub-header-buttons */
+/* Hide scrollbar for IE, Edge and Firefox */
+.eiffel .carrousel {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.guide-pictures {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.sub-header-buttons {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+:root {
+  --max-width: 1136px;
+}
+/* GLOBAL RULES */
+.container {
+  width: 1136px;
+  margin: 0 auto;
+  font-family: "Trip Sans Med";
+  border: none;
+  font-size: 1rem;
+  line-height: 20px;
+  color: #333333;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+.hidden {
+  display: none;
+}
+
+/* HEADER */
+header {
+  /* padding-top: 10px; */
+  width: 100%;
+  z-index: 10;
+  top: 0;
+  position: fixed;
+  background-color: white;
+}
+header .navbar > i {
+  display: none;
+  cursor: pointer;
+}
+.navbar {
+  margin: 0 auto;
+  /* padding: 0 auto; */
+  font-family: "Trip Sans Med";
+  font-size: 16px;
+  line-height: 19.8px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* left: 392px; */
+}
+
+.navbar .col-1 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+header ul {
+  display: flex;
+  color: #333333;
+  justify-content: space-evenly;
+  align-items: center;
+}
+header ul a {
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 15px;
+  color: #333333;
+}
+header ul a:hover {
+  height: 20px;
+  border-radius: 20px;
+  background-color: rgb(210, 212, 214);
+}
+header ul a i {
+  margin-right: 5px;
+  list-style: none;
+  line-height: 100%;
+}
+
+.nav-img {
+  max-width: 189px;
+  max-height: 40px;
+  margin-right: 20px;
+}
+header .search-box {
+  box-sizing: border-box;
+  padding-top: 10px;
+  max-width: 250px;
+  height: 38px;
+  border-radius: 8px;
+  border: solid 1px;
+  padding-left: 10px;
+}
+.nav-search {
+  margin-left: 5px;
+  max-width: 200px;
+  max-height: 38px;
+  border: none;
+  outline: none;
+  border: none;
+  border-radius: 0;
+  padding-bottom: 0;
+  font-size: 1rem;
+}
+.search-box:focus-within {
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid;
+}
+header button {
+  font: inherit;
+  border: none;
+  height: 40px;
+  max-width: 143px;
+  color: white;
+  border-radius: 20px;
+  background-color: #333333;
+}
+header button:hover {
+  cursor: pointer;
+  background-color: #505050;
+}
+
+/* SUB HEADER */
+.sub-header {
+  position: relative;
+  margin-top: 90px;
+}
+.sub-header .shadow {
+  display: none;
+  position: absolute;
+  top: 57%;
+}
+.sub-header .shadow > i {
+  cursor: pointer;
+  font-size: 25px;
+}
+.sub-header .shadow:last-child > i {
+  right: 0px;
+}
+.text-red {
+  color: #ff5e5e;
+}
+.sub-header h1 {
+  font-family: "Trip Sans Med";
+  font-weight: bold;
+  font-size: 54px;
+  line-height: 64.8px;
+  margin-bottom: 15px;
+  letter-spacing: 1.1px;
+}
+.sub-header-buttons a:hover {
+  background-color: #333333;
+  color: white;
+}
+.sub-header-buttons li {
+  width: 15.8%;
+}
+.sub-header-buttons a {
+  padding: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-family: "Trip Sans Med";
+  font-size: 16px;
+  line-height: 19.8px;
+  width: 100%;
+  height: 64px;
+  color: #333333;
+  background-color: white;
+  border: solid 1px black;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.sub-header-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+/* Pictures */
+
+.pictures button {
+  left: 15px;
+  cursor: pointer;
+  bottom: 15px;
+  position: absolute;
+  font-size: 12px;
+  line-height: 14.4px;
+  font-family: "Trip Sans";
+  border: none;
+  height: 39px;
+  width: 128px;
+  color: white;
+  border-radius: 20px;
+  background-color: #333333;
+}
+.pictures button i {
+  font-size: 15px;
+  margin-right: 1px;
+}
+.pictures button:hover {
+  opacity: 70%;
+}
+.pictures {
+  display: flex;
+  margin-top: 20px;
+  height: 430px;
+  cursor: pointer;
+}
+.pictures div:first-child {
+  position: relative;
+  width: 57%;
+  box-sizing: border-box;
+  margin-right: 3px;
+}
+.pictures div:first-child img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.pictures div:last-child {
+  width: 42.3%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.pictures img:hover {
+  opacity: 85%;
+}
+.pictures div:last-child img {
+  height: calc(50% - 1.5px);
+  width: 100%;
+  object-fit: cover;
+}
+.pictures div:last-child img:first-child {
+  margin-bottom: 3px;
+}
+/* Text Line */
+.text-line {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Trip Sans";
+  font-size: 12px;
+  color: #333333;
+}
+.text-line ul li:last-child span {
+  font-size: 7px;
+}
+.text-line ul {
+  display: flex;
+}
+.text-line ul li:hover {
+  text-decoration: underline;
+}
+.text-line a {
+  font-family: "Trip Sans";
+  font-size: 12px;
+  color: #333333;
+}
+
+/* Description and Map */
+.desc {
+  display: flex;
+  justify-content: space-between;
+  height: 465px;
+  margin-bottom: 80px;
+}
+.desc-text {
+  max-width: 50%;
+}
+.desc h2 {
+  margin-bottom: 10px;
+  font-size: 28px;
+  line-height: 33.6px;
+  color: black;
+}
+.desc p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  line-height: 24px;
+  color: #333333;
+}
+.desc-org {
+  width: 41%;
+  box-sizing: border-box;
+  /* display: flex;
+  flex-direction: column; */
+}
+.desc-org-upper {
+  padding: 32px 32px 8px;
+  box-sizing: border-box;
+  border-radius: 15px 15px 0 0;
+  height: 275px;
+  width: 100%;
+  background-color: #ff5d5d;
+}
+.desc-org-upper h2 {
+  font-family: inherit;
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+.desc-org-upper p {
+  font-family: "Trip Sans";
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+.desc-org-map img {
+  height: 190px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0 0 15px 15px;
+}
+.desc button {
+  margin-bottom: 0;
+  cursor: pointer;
+  background-color: #333333;
+  color: white;
+  width: 154px;
+  height: 54px;
+  padding: 10px;
+  font-family: inherit;
+  border-radius: 20px;
+  border: none;
+}
+.desc button:hover {
+  opacity: 85%;
+}
+
+/* EIFFEL */
+.eiffel {
+  box-sizing: border-box;
+}
+.eiffel h1 {
+  font-size: 28px;
+  line-height: 36px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.eiffel-sub-div {
+  position: relative;
+  height: 334.98px;
+  width: 100%;
+  display: flex;
+  margin-bottom: 60px;
+}
+.eiffel .text {
+  padding-right: 80px;
+  width: 25.3521%;
+  box-sizing: border-box;
+}
+.eiffel .text h2 {
+  font-size: 24px;
+  line-height: 28.5px;
+}
+.eiffel .text p {
+  margin: 14px 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 18px;
+  line-height: 21.6px;
+}
+.eiffel .text a {
+  color: inherit;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 16.8px;
+}
+.eiffel .text a:hover {
+  text-decoration: underline;
+}
+.carrousel {
+  width: 74.7%;
+  display: flex;
+  box-sizing: border-box;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+.carrousel #arrow-left,
+.carrousel #arrow-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  bottom: 230px;
+  z-index: 2;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.carrousel #arrow-left {
+  left: 23.7%;
+}
+.carrousel #arrow-right {
+  right: -35px;
+}
+.carrousel #arrow-right i,
+.carrousel #arrow-left i {
+  color: #333333;
+}
+
+.carrousel h2 {
+  margin: 5px 0;
+  font-family: inherit;
+  color: #545454;
+  line-height: 21px;
+  font-weight: bold;
+  font-size: 18px;
+}
+.carrousel p {
+  font-family: "Trip Sans";
+  font-size: 14px;
+  line-height: 16.8px;
+  margin-top: 4px;
+}
+.carrousel i {
+  color: #03aa6c;
+}
+.carrousel > div {
+  margin-right: 1.2%;
+  flex-shrink: 0;
+  width: 32.4%;
+  height: 100%;
+  /* background-color: red; */
+  box-sizing: border-box;
+}
+.carrousel > div:last-child {
+  margin-right: 0;
+}
+.img-block {
+  width: 100%;
+  position: relative;
+}
+.carrousel img {
+  max-width: 100%;
+  max-height: 205px;
+  object-fit: cover;
+}
+.heart {
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heart i {
+  color: #333333;
+}
+.trip-2020 {
+  position: absolute;
+  bottom: 15px;
+  left: 10px;
+  padding: 4px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 29px;
+  height: 40px;
+  border-radius: 35px 35px 15px 15px;
+  background-color: #0fe094;
+}
+.trip-2020 p {
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 11px;
+}
+.trip-2020 i {
+  margin-top: 5px;
+  margin-bottom: -5px;
+  color: black;
+  font-size: 1rem;
+}
+.guide {
+  box-sizing: border-box;
+  position: relative;
+}
+.guide h1 {
+  font-size: 28px;
+  line-height: 36px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.guide #arrow-left,
+.guide #arrow-right {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  bottom: 230px;
+  z-index: 2;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.guide #arrow-left {
+  left: 5px;
+  top: 45%;
+}
+.guide #arrow-right {
+  right: 0px;
+  top: 45%;
+}
+.guide #arrow-right i,
+.guide #arrow-left i {
+  color: #333333;
+}
+.guide h2 {
+  font-size: 18px;
+  line-height: 21.6px;
+  color: #545454;
+}
+.guide p {
+  font-size: 14px;
+  line-height: 16.6px;
+  color: #333333;
+  font-family: "Trip Sans";
+  margin-bottom: 5px;
+}
+.guide h6 {
+  font-size: 14px;
+  line-height: 16.8px;
+  color: #545454;
+  font-family: "Trip Sans";
+  display: inline;
+}
+.guide-pictures {
+  display: flex;
+  justify-content: space-between;
+  max-height: 370px;
+  width: 100%;
+  margin-bottom: 60px;
+}
+.guide .bold {
+  font-family: "Trip Sans Med";
+  font-weight: bold;
+  margin-left: 1px;
+}
+.guide-pictures div {
+  max-height: 370px;
+  width: 32%;
+  box-sizing: border-box;
+}
+.guide-pictures img {
+  max-height: 276px;
+  width: 100%;
+  object-fit: cover;
+}
+.guide .avatar {
+  max-width: 6.6%;
+  max-height: 24px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.guide .author {
+  height: min-content;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #faf1ed;
+  width: 100%;
+  height: 150px;
+}
+footer p {
+  font-size: 1rem;
+  margin-left: 10px;
+  color: #333333;
+}
+footer a {
+  font-weight: bold;
+  color: #333333;
+}
+.submit-screen-background {
+  z-index: 15;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.submit-box {
+  z-index: 20;
+  position: relative;
+  opacity: 1;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 2px black;
+  width: 490px;
+  height: 680px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.submit-box form {
+  font-family: "Trip Sans Med";
+  font-weight: bold;
+  width: 70%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.submit-box h2 {
+  font-family: "Trip Sans Med";
+  font-size: 30px;
+  line-height: 24px;
+  margin: 5% auto 10%;
+  font-weight: bold;
+}
+.submit-box form input {
+  font-family: "Trip Sans Med";
+  font-weight: bold;
+  padding: 0 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 90%;
+  height: 8%;
+  margin-bottom: 6%;
+  border: 2px solid grey;
+}
+.submit-box form textarea {
+  font-family: "Trip Sans Med";
+  font-weight: bold;
+  font-size: 1rem;
+  resize: none;
+  width: 90%;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid grey;
+}
+.submit-box form button {
+  cursor: pointer;
+  margin: 10% 0 10%;
+  background-color: #248f66;
+  padding: 10px;
+  color: white;
+  width: 80%;
+  border-radius: 15px;
+  border: none;
+  font-size: 1rem;
+}
+.submit-box form button:hover {
+  opacity: 0.8;
+}
+.submit-box i {
+  cursor: pointer;
+  font-size: 1.5rem;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.submit-box i:hover {
+  opacity: 0.8;
+  font-size: 2rem;
+}
+.display-on {
+  display: flex;
+}

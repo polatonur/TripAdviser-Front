@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="favicon.ico?v=1" type="image/x-icon" />
+
+    <!-- icons -->
+    <script
+      src="https://kit.fontawesome.com/69ddfd11b6.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- import css -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/desktop.css">
+    <link rel="stylesheet" href="./assets/css/tablet.css">
+    <link rel="stylesheet" href="./assets/css/mobil.css">
+    <!-- js -->
+    <script src="./assets/js/app.js"></script>
+
+    <title>Tourisme à Paris 2021 : Visiter Paris - Tripadvisor</title>
+  </head>
+  <body>
+    <header>
+     <div class="navbar container">
+      <i class="fas fa-bars"></i>
+     <div class="col-1">
+      <a href="/">
+        <img
+          class="nav-img"
+          src="./assets/img/Tripadvisor_lockup_horizontal.svg"
+          alt=""
+        />
+      </a>
+      <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input class="nav-search" type="search" />
+      </div>
+     </div>
+     <i class="fas fa-search"></i>
+    <nav>
+      <ul>
+        <li>
+          <a href="/"><i class="fas fa-pencil-alt"></i><span>Avis</span></a>
+        </li>
+        <li>
+          <a href="/"><i class="far fa-heart"></i><span>Voyages</span></a>
+        </li>
+        <li>
+          <a href="/"><i class="far fa-bell"></i> <span>Alertes</span></a>
+        </li>
+        <li><button id="btn-contact" type="button">Connectez-vous</button></li>
+      </ul>
+    </nav>
+  </div>
+    </header>
+      <main >
+        <div class="sub-header container">
+          <h1><span class="text-red">Explorez</span> Paris</h1>
+          <div class="shadow"><i class="fas fa-chevron-left"></i></div>
+          <ul class="sub-header-buttons">
+            <li>
+              <a href="/">Hotels <i class="fas fa-bed"></i></a>
+            </li>
+            <li>
+              <a href="/">Location de vacances<i class="fas fa-key"></i></a>
+            </li>
+            <li>
+              <a href="/">Activites <i class="fas fa-hiking"></i></a>
+            </li>
+            <li>
+              <a href="/">Restaurant<i class="fas fa-utensils"></i></a>
+            </li>
+            <li>
+              <a href="/">Forums de voyages<i class="far fa-comments"></i></a>
+            </li>
+            <li class="hidden">
+              <a href="/">Vols<i class="fas fa-plane"></i>
+              </a>
+            </li>
+            <li class="hidden">
+              <a href="/">Croisiere <i class="fas fa-ship"></i></a>
+            </li>
+            <li>
+              <a href="/">Plus <i class="fas fa-ellipsis-h"></i></a>
+            </li>
+          </ul>
+          <div class="shadow">  <i class="fas fa-chevron-right"></i>
+          </div>
+         </div>
+        <div class="pictures container">
+          <div>
+            <img src="./assets/img/pic-1.jpeg" alt="paris picture" />
+            <button type= "menu"><i class="far fa-image"></i> Toutes les photos
+
+            </button>
+          </div>
+          <div>
+            <img src="./assets/img/pic-2.jpeg" alt="picture paris" />
+            <img src="./assets/img/pic-3.jpeg" alt="picture paris" />
+          </div>
+        </div>
+        <div class="text-line container ">
+          <ul>
+            <li><a href="/">Europe</a><span>&nbsp > &nbsp</span></li>
+            <li><a href="/">France</a><span>&nbsp > &nbsp</span></li>
+            <li><a href="/">Île-de-France</a> <span>&nbsp > &nbsp</span></li>
+            <li><a href="/">Paris <span>▼</span></a></li>
+          </ul> 
+          <h6>Visiter : Paris</h6>
+        </div>
+        <div class="desc container">
+          <div class="desc-text">
+            <h2>La Ville Lumière éblouit en tous points</h2>
+            <p>
+              Aucun autre endroit au monde ne fait autant rêver que Paris. La
+              ville séduit par son art, son architecture, sa culture et sa
+              cuisine, mais il y a aussi des merveilles plus discrètes qui
+              n’attendent qu’à être explorées : les ruelles pavées pittoresques,
+              les pâtisseries au coin de la rue et les petits bistrots douillets
+              qui vous invitent à boire un verre de beaujolais. Préparez-vous à
+              vous approprier Paris.
+            </p>
+          </div>
+          <div class="desc-org">
+            <div class="desc-org-upper">
+              <h2>Paris : commencez à organiser !</h2>
+              <p>
+                Créez un voyage pour enregistrer et organiser toutes vos idées
+                et les visualiser sur une carte.
+              </p>
+              <button type="button">Créez un voyage</button>
+            </div>
+            <div class="desc-org-map">
+              <img src="./assets/img/pic-map.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <section class="eiffel container">
+          <h1>Paris : les immanquables</h1>
+          <div class="eiffel-sub-div">
+            <div class="text">
+              <h2>Se divertir</h2>
+              <p>
+                Des lieux à voir, des rues à explorer et des expériences
+                emblématiques à Paris.
+              </p>
+              <a href="/">Tout afficher</a>
+            </div>
+            <div class="carrousel" id="crsl">
+              <div id="arrow-left"><i class="fas fa-arrow-left"></i></div>
+              <div id="arrow-right"><i class="fas fa-arrow-right"></i></div>
+              <div class="card-1">
+                <div class="img-block">
+                <img src="./assets/img/eiffeltower.jpeg" alt="" />
+                <div class="heart">
+                  <i class="far fa-heart"></i>
+                </div>
+                <div class="trip-2020">
+                  <i class="fab fa-tripadvisor"></i>
+                  <p>2020</p>
+                </div>
+              </div>
+                
+                <h2>Tour Eiffel</h2>
+                <p>
+                  <i class="fas fa-circle"></i><i class="fas fa-circle"></i
+                  ><i class="fas fa-circle"></i><i class="fas fa-circle"></i
+                  ><i class="fas fa-circle"></i> &nbsp140 265
+                </p>
+                <p>
+                  Tours et plateformes d'observation, Monuments & Points
+                  d'intérêt
+                </p>
+              </div>
+              <div class="card-2">
+                <div class="img-block">
+                  <img src="./assets/img/louvre.jpeg" alt="" />
+                  <div class="heart">
+                    <i class="far fa-heart"></i>
+                  </div>
+                  <div class="trip-2020">
+                    <i class="fab fa-tripadvisor"></i>
+                    <p>2020</p>
+                  </div>
+                </div>
+               
+                <h2>Musée du Louvre</h2>
+                <p>
+                  <i class="fas fa-circle"></i><i class="fas fa-circle"></i
+                  ><i class="fas fa-circle"></i><i class="fas fa-circle"></i
+                  ><i class="fas fa-circle"></i> &nbsp100 881
+                </p>
+                <p>Bâtiments architecturaux, Musées d'art</p>
+              </div>
+              <div class="card-3">
+                <div class="img-block">
+                  <img src="./assets/img/arc-de-triomphe-at-night.jpeg" alt="" />
+                  <div class="heart">
+                    <i class="far fa-heart"></i>
+                  </div>
+                  <div class="trip-2020">
+                    <i class="fab fa-tripadvisor"></i>
+                    <p>2020</p>
+                  </div>
+                </div>
+                
+                <h2>Arc de Triomphe</h2>
+                <p>
+                  <i class="fas fa-circle"></i><i class="fas fa-circle"></i
+                  ><i class="fas fa-circle"></i><i class="fas fa-circle"></i
+                  ><i class="fas fa-circle"></i> &nbsp45 114
+                </p>
+                <p>Bâtiments architecturaux, Sites historiques</p>
+              </div>
+              <div class="card-4">
+                <div class="img-block">
+                  <img src="./assets/img/vue-de-la-cour-d-honneur.jpeg" alt="" />
+                  <div class="heart">
+                    <i class="far fa-heart"></i>
+                  </div>
+                  <div class="trip-2020">
+                    <i class="fab fa-tripadvisor"></i>
+                    <p>2020</p>
+                  </div>
+                </div>
+                
+                <h2>Musée Rodin</h2>
+                <p>
+                  <i class="fas fa-circle"></i><i class="fas fa-circle"></i
+                  ><i class="fas fa-circle"></i><i class="fas fa-circle"></i
+                  ><i class="fas fa-circle"></i> &nbsp12 457
+                </p>
+                <p>Musées spécialisés</p>
+              </div>
+              <div class="card-5">
+                <div class="img-block">
+                  <img src="./assets/img/notre-dame.jpeg" alt="" />
+                  <div class="heart">
+                    <i class="far fa-heart"></i>
+                  </div>
+                  <div class="trip-2020">
+                    <i class="fab fa-tripadvisor"></i>
+                    <p>2020</p>
+                  </div>
+                </div>
+                <h2>Cathédrale Notre-Dame de Paris</h2>
+                <p>
+                  <i class="fas fa-circle"></i><i class="fas fa-circle"></i
+                  ><i class="fas fa-circle"></i><i class="fas fa-circle"></i
+                  ><i class="fas fa-circle"></i> &nbsp71 242
+                </p>
+                <p>Bâtiments architecturaux, Sites historiques</p>
+              </div>
+              <div class="card-6">
+                <div class="img-block">
+                  <img src="./assets/img/the-bookstore.jpeg" alt="" />
+                  <div class="heart">
+                    <i class="far fa-heart"></i>
+                  </div>
+                  <div class="trip-2020">
+                    <i class="fab fa-tripadvisor"></i>
+                    <p>2020</p>
+                  </div>
+                </div>
+               
+                <h2>Librairie Shakespeare and Company</h2>
+                <p>
+                  <i class="fas fa-circle"></i><i class="fas fa-circle"></i
+                  ><i class="fas fa-circle"></i><i class="fas fa-circle"></i
+                  ><i class="fas fa-circle"></i> &nbsp3 922
+                </p>
+                <p>Bibliothèques, Grands magasins</p>
+              </div>
+              <div class="card-7">
+                <div class="img-block">
+                  <img src="./assets/img/orsay.jpeg" alt="" />
+                  <div class="heart">
+                    <i class="far fa-heart"></i>
+                  </div>
+                  <div class="trip-2020">
+                    <i class="fab fa-tripadvisor"></i>
+                    <p>2020</p>
+                  </div>
+                </div>
+                
+                <h2>Musée d'Orsay</h2>
+                <p>
+                  <i class="fas fa-circle"></i><i class="fas fa-circle"></i
+                  ><i class="fas fa-circle"></i><i class="fas fa-circle"></i
+                  ><i class="fas fa-circle"></i> &nbsp65 771
+                </p>
+                <p>Musées d'art</p>
+              </div>
+              <div class="card-8">
+                <div class="img-block">
+                  <img src="./assets/img/marche-vernaison-maison.jpeg" alt="" />
+                  <div class="heart">
+                    <i class="far fa-heart"></i>
+                  </div>
+                  <div class="trip-2020">
+                    <i class="fab fa-tripadvisor"></i>
+                    <p>2020</p>
+                  </div>
+                </div>
+                
+                <h2>Marché aux Puces de Saint-Ouen</h2>
+                <p>
+                  <i class="fas fa-circle"></i><i class="fas fa-circle"></i
+                  ><i class="fas fa-circle"></i><i class="fas fa-circle"></i
+                  ><i class="far fa-circle"></i> &nbsp865
+                </p>
+                <p>
+                  Antiquaires, Marchés aux puces & Marchés de rue <p>À 5,4
+                    kilomètres de Paris</p> <p>Saint-Ouen, France</p>
+                </p>
+              </div>
+              <div class="card-9">
+                <div class="img-block">
+                  <img src="./assets/img/basilica-del-sagrado.jpeg" alt="" />
+                  <div class="heart">
+                    <i class="far fa-heart"></i>
+                  </div>
+                  <div class="trip-2020">
+                    <i class="fab fa-tripadvisor"></i>
+                    <p>2020</p>
+                  </div>
+                </div>
+                
+                <h2>Basilique du Sacré-Cœur de Montmartre</h2>
+                <p>
+                  <i class="fas fa-circle"></i><i class="fas fa-circle"></i
+                  ><i class="fas fa-circle"></i><i class="fas fa-circle"></i
+                  ><i class="fas fa-circle"></i> &nbsp38 639
+                </p>
+                <p>Églises et cathédrales</p>
+              </div>
+              <div class="card-10">
+                <div class="img-block">
+                  <img src="./assets/img/jardin-des-tuileries.jpeg" alt="" />
+                  <div class="heart">
+                    <i class="far fa-heart"></i>
+                  </div>
+                  <div class="trip-2020">
+                    <i class="fab fa-tripadvisor"></i>
+                    <p>2020</p>
+                  </div>
+                </div>
+                <h2>Jardin des Tuileries</h2>
+                <p>
+                  <i class="fas fa-circle"></i><i class="fas fa-circle"></i
+                  ><i class="fas fa-circle"></i><i class="fas fa-circle"></i
+                  ><i class="fas fa-circle"></i> &nbsp7 525
+                </p>
+                <p>Jardins</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="guide container">
+          <h1>Guides de voyageurs</h1>
+          <div class="guide-pictures">
+            <div id="arrow-left"><i class="fas fa-arrow-left"></i></div>
+            <div id="arrow-right"><i class="fas fa-arrow-right"></i></div>
+            <div>
+              <img src="./assets/img/guide-pic-1.jpeg" alt=""><h2> Best summer things to do in Paris | Eatwith</h2>
+            <p>36 articles</p>
+            <div class="author">
+              <img class="avatar" src="/assets/img/eatwith.jpeg" alt=""><h6>Par  <span class="bold">Earthwith</span></h6>
+            </div>
+          </div>
+            <div>
+              <img src="./assets/img/guide-pic-2.jpeg" alt=""><h2>Les 10 monuments et musées de Paris à faire.</h2>
+            <p>10 articles</p>
+            <div class="author">
+              <img class="avatar" src="/assets/img/topito.jpeg" alt=""><h6>Par  <span class="bold">Topito</span></h6>
+            </div>
+           </div>
+            <div>
+              <img src="./assets/img/guide-pic-3.jpeg" alt=""><h2>Top 10 des choses à faire ou à voir dans le 14ème
+            </h2>
+            <p>10 articles</p>
+            <div class="author"><img class="avatar" src="/assets/img/topito.jpeg" alt=""><h6>Par  <span class="bold">Topito</span></h6>
+            </div>
+          </div>
+          </div>
+        </section>
+      </main>
+
+      <div class="submit-screen-background">
+        <div class="submit-box">
+          <form id="contact-form" action="">
+            <i id="btn-close-submit-box" class="fas fa-times"></i>
+            <h2>Formulaire de contact</h2>
+            <input id="firstname" type="text" placeholder="Prénom"  required >
+            <input id="lastname" type="text" placeholder="Nom" required>
+            <input id="email" type="email" placeholder="Email" required>
+            <textarea name="" id="user-message" cols="30" rows="8" placeholder="Écrivez votre message ici" ></textarea>
+            <button id="btn-submit">Envoyer le formulaire</button>
+            <h1 id="response"></h1>
+          </form>
+        </div>
+      </div>
+     
+      
+    <footer >
+      <img src="./favicon.ico" alt="">
+      <p>
+         Made at <a href="https://www.lereacteur.io/"><b>Le Reacteur</b></a> by <a href="https://github.com/polatonur"><b>Onur Polat</b></a> - 2021
+      </p>
+    </footer>
+  </body> 
+</html>

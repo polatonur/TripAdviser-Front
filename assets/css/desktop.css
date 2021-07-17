@@ -1,0 +1,45 @@
+@media (max-width: 1184px) {
+  /* Rules */
+  .hidden {
+    display: block;
+  }
+  .container {
+    width: 95%;
+  }
+  header {
+    /* width: 100%; */
+    z-index: 10;
+    top: 0;
+    position: fixed;
+  }
+  .pictures div:first-child {
+    max-height: 372px;
+  }
+  .pictures div:first-child img {
+    height: 372px;
+  }
+  .pictures div:last-child {
+    height: 372px;
+  }
+  .eiffel {
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 25px;
+  }
+  .carrousel {
+    overflow-y: hidden;
+  }
+  .carrousel #arrow-right {
+    right: 2px;
+  }
+
+  .sub-header-buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .sub-header-buttons li {
+    width: 24.42%;
+    margin-bottom: 8px;
+  }
+}
