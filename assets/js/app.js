@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
           console.log(response.status);
         })
         .catch((err) => {
-          console.log(error);
+          console.log(err);
         });
 
       const msg = document.querySelector("#response");
