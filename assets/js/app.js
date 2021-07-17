@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const msg = document.querySelector("#response");
       await axios
-        .post("http://localhost:8000/contact", data)
+        .post("https://tripadviser-backend.herokuapp.com/contact", data)
         .then((response) => {
           console.log(response);
           console.log(response.status);
