@@ -64,18 +64,20 @@
     width: 33.6%;
   }
   .desc {
-    height: calc(219px+294px);
+    min-height: calc(219px+294px);
     margin-bottom: 80px;
-    display: flex;
+    display: block;
     flex-direction: column;
   }
   .desc-text {
-    height: 219px;
+    /* flex: 1; */
+    /* min-height: 219px; */
     max-width: 100%;
     margin-bottom: 20px;
   }
   .desc-org {
-    height: 294px;
+    flex: 2;
+    height: 65%;
     width: 100%;
     display: flex;
   }
@@ -115,6 +117,7 @@
     width: 100%;
     max-height: 369px;
     padding-left: 20px;
+    margin-bottom: 20px;
   }
   /* Guide */
 
@@ -124,7 +127,6 @@
   }
   .guide h1 {
     padding-left: 20px;
-    margin: 0;
   }
   .guide #arrow-left,
   .guide #arrow-right {

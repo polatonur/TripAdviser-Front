@@ -400,7 +400,7 @@ header button:hover {
 }
 .eiffel-sub-div {
   position: relative;
-  height: 334.98px;
+  /* height: 334.98px; */
   width: 100%;
   display: flex;
   margin-bottom: 60px;
