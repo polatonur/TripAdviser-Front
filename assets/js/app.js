@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // scrollbar -1
   const scrollRight = () => {
     document.getElementById("crsl").scrollLeft += 854.859;
   };
@@ -11,6 +12,29 @@ document.addEventListener("DOMContentLoaded", () => {
   const buttonLeft = document.getElementById("arrow-right");
   buttonLeft.addEventListener("click", scrollRight);
 
+  //scrollbar - 2
+  document
+    .querySelector("#btn-l-upper-carusel")
+    .addEventListener("click", () => {
+      document.querySelector(".sub-header-buttons").scrollLeft += 500.859;
+    });
+  document
+    .querySelector("#btn-r-upper-carusel")
+    .addEventListener("click", () => {
+      document.querySelector(".sub-header-buttons").scrollLeft -= 500.859;
+    });
+
+  //scrollbar - 3
+  document.querySelector(".arrow-left-bottom").addEventListener("click", () => {
+    document.querySelector(".guide-pictures").scrollLeft += 500.859;
+  });
+  document
+    .querySelector(".arrow-right-bottom")
+    .addEventListener("click", () => {
+      document.querySelector(".guide-pictures").scrollLeft -= 500.859;
+    });
+
+  // btn contact
   document.querySelector("#btn-contact").addEventListener("click", () => {
     document
       .querySelector(".submit-screen-background")

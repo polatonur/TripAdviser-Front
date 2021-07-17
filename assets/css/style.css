@@ -177,14 +177,23 @@ header button:hover {
 .sub-header .shadow {
   display: none;
   position: absolute;
-  top: 57%;
+  top: 51%;
+  width: 70px;
+  height: 42px;
+  background: linear-gradient(
+    275deg,
+    rgb(252, 252, 252) 30%,
+    rgba(241, 241, 241, 0.1)
+  );
 }
-.sub-header .shadow > i {
+
+.sub-header .sadow > i {
+  padding: 10px;
   cursor: pointer;
   font-size: 25px;
 }
-.sub-header .shadow:last-child > i {
-  right: 0px;
+.sub-header .shadow > i {
+  cursor: pointer;
 }
 .text-red {
   color: #ff5e5e;

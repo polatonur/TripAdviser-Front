@@ -34,16 +34,29 @@
     margin-bottom: 20px;
     margin-left: 20px;
   }
+  .sub-header > i {
+    cursor: pointer;
+  }
   .sub-header > i,
   .sub-header > .shadow {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 2;
   }
   .sub-header > .shadow:last-child {
     right: 0px;
   }
+  .sub-header .up {
+    background: linear-gradient(
+      90deg,
+      rgb(252, 252, 252) 30%,
+      rgba(241, 241, 241, 0.1)
+    );
+  }
   .sub-header-buttons {
     overflow-x: scroll;
+    scroll-behavior: smooth;
     flex-wrap: nowrap;
   }
   .sub-header-buttons li {
